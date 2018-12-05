@@ -1,1 +1,13 @@
-
+#Create new file
+vi filename
+#insert - end with esc
+i
+#quit vi, writing out modified file to file named in original invocation
+:x<Return>	
+#quit (or exit) vi
+:q<Return>	
+#delete line
+:d
+*dd
+#delete N lines, beginning with the current line; e.g., 5dd deletes 5 lines
+ndd or dnd
