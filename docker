@@ -4,3 +4,7 @@ sudo chmod 666 /var/run/docker.sock
 
 #Flask
 sudo lsof -i:5000
+
+
+vim ~/.bashrc
+alias python=python3
