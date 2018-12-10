@@ -8,3 +8,13 @@ sudo lsof -i:5000
 
 vim ~/.bashrc
 alias python=python3
+
+#self._sslobj.do_handshake() SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590)
+export PYTHONHTTPSVERIFY=0
+python your_script
+#OR Alternatively, you can add this to your code before doing the https request
+import os, ssl
+if (not os.environ.get('PYTHONHTTPSVERIFY', '') and
+    getattr(ssl, '_create_unverified_context', None)): 
+    ssl._create_default_https_context = ssl._create_unverified_context
+
