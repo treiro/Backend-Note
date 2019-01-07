@@ -1,6 +1,6 @@
 # Backend Outline
 
-[![N|Solid](http://wiki.sigma-solutions.vn/resources/assets/wiki-logo.png?d6e47)](https://nodesource.com/products/nsolid)
+[![N|Solid](http://wiki.sigma-solutions.vn/resources/assets/wiki-logo.png?d6e47)](http://wiki.sigma-solutions.vn/resources/assets/wiki-logo.png?d6e47)
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
