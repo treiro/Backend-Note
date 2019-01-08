@@ -91,7 +91,7 @@ Implement Flexiplayer for Android
     }
 ```
  - Switch player from mini to full screen
- ```javascript
+ ```java
 public class UiUtil {
     public static final void openFullPlayer(Context ctx) {
         if (ctx != null) {
@@ -104,7 +104,7 @@ public class UiUtil {
             }
             if (MemoryCache.getDefault().getiFlexiGuiUiManager() != null)
                 MemoryCache.getDefault().getiFlexiGuiUiManager().onRemoveFlexiFragment();
-            new FullScreenPlayerOverLayFragmentDialog().show(((AppCompatActivity) ctx).getSupportFragmentManager(), "full_player");
+            new FullScreenPlayerOverLayFragmentDialog().show(((AppCompatActivity) ctx).getSupportFragmentManager(), "full_player"); 
         }
     }
 
