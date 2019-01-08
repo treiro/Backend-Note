@@ -27,7 +27,7 @@ Roadmap to become backend developer from Mobile developer
 
   - RESTful API
   - Json, xml
-  - Response, http code status
+  - Response, http code status, metadata, header
   - Db model design
   - Sql (mysql, posgresql,..)
   - Nosql(mongodb)
