@@ -48,6 +48,8 @@ Roadmap to become backend developer from Mobile developer
 
   - Python language
   - Flask framework
+>>>Flask MySql CRUD
+>>>https://hk.saowen.com/a/2e437bdbea77ec37df2e2c26d9d2405e8ad8d4336e0c5c1740cbe9be35252a49
 
 ### Deployment
 
