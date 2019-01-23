@@ -50,7 +50,8 @@ Roadmap to become backend developer from Mobile developer
   - Flask framework
 >>>Flask MySql CRUD
 >>>https://hk.saowen.com/a/2e437bdbea77ec37df2e2c26d9d2405e8ad8d4336e0c5c1740cbe9be35252a49
-
+>>>Flash Sqlite REST API
+>>>https://github.com/binhbt/flask-rest-api-sqlite
 ### Deployment
 
   - Apache
