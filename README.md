@@ -50,3 +50,8 @@ sudo kill `cat /var/run/mysqld/mysqld.pid`
 Restart mysql
 
 sudo systemctl start mysql
+
+
+heroku run gunicorn echobot:app # run with cloud src at local
+heroku local echobot:app # run on local src
+
