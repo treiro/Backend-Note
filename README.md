@@ -54,4 +54,5 @@ sudo systemctl start mysql
 
 heroku run gunicorn echobot:app # run with cloud src at local
 heroku local echobot:app # run on local src
+```heroku git:remote -a your-first-heroku-app
 
