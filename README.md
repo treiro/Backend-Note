@@ -55,7 +55,8 @@ sudo systemctl start mysql
 heroku run gunicorn echobot:app # run with cloud src at local
 heroku local echobot:app # run on local src
 ...heroku git:remote -a your-first-heroku-app
-
+#install postgre
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04
 #Install VertualEnviroment
 https://stackoverflow.com/questions/13855463/bash-mkvirtualenv-command-not-found
 Since I just went though a drag, I'll try to write the answer I'd have wished for two hours ago. This is for people who don't just want the copy&paste solution
