@@ -56,3 +56,41 @@ heroku run gunicorn echobot:app # run with cloud src at local
 heroku local echobot:app # run on local src
 ...heroku git:remote -a your-first-heroku-app
 
+#Install VertualEnviroment
+https://stackoverflow.com/questions/13855463/bash-mkvirtualenv-command-not-found
+Since I just went though a drag, I'll try to write the answer I'd have wished for two hours ago. This is for people who don't just want the copy&paste solution
+
+First: Do you wonder why copying and pasting paths works for some people while it doesn't work for others?** The main reason, solutions differ are different python versions, 2.x or 3.x. There are actually distinct versions of virtualenv and virtualenvwrapper that work with either python 2 or 3. If you are on python 2 install like so:
+
+sudo pip install virutalenv
+sudo pip install virtualenvwrapper
+If you are planning to use python 3 install the related python 3 versions
+
+sudo pip3 install virtualenv
+sudo pip3 install virtualenvwrapper
+You've successfully installed the packages for your python version and are all set, right? Well, try it. Type workon into your terminal. Your terminal will not be able to find the command (workon is a command of virtualenvwrapper). Of course it won't. Workon is an executable that will only be available to you once you load/source the file virtualenvwrapper.sh. But the official installation guide has you covered on this one, right?. Just open your .bash_profile and insert the following, it says in the documentation:
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
+Especially the command source /usr/local/bin/virtualenvwrapper.sh seems helpful since the command seems to load/source the desired file virtualenvwrapper.sh that contains all the commands you want to work with like workon and mkvirtualenv. But yeah, no. When following the official installation guide, you are very likely to receive the error from the initial post: mkvirtualenv: command not found. Still no command is being found and you are still frustrated. So whats the problem here? The problem is that virtualenvwrapper.sh is not were you are looking for it right now. Short reminder ... you are looking here:
+
+source /usr/local/bin/virtualenvwrapper.sh
+But there is a pretty straight forward way to finding the desired file. Just type
+
+which virtualenvwrapper
+to your terminal. This will search your PATH for the file, since it is very likely to be in some folder that is included in the PATH of your system.
+
+If your system is very exotic, the desired file will hide outside of a PATH folder. In that case you can find the path to virtalenvwrapper.sh with the shell command find / -name virtualenvwrapper.sh
+
+Your result may look something like this: /Library/Frameworks/Python.framework/Versions/3.7/bin/virtualenvwrapper.sh Congratulations. You have found your missing file!. Now all you have to do is changing one command in your .bash_profile. Just change:
+
+source "/usr/local/bin/virtualenvwrapper.sh"
+to:
+
+"/Library/Frameworks/Python.framework/Versions/3.7/bin/virtualenvwrapper.sh"
+Congratulations. Virtualenvwrapper does now work on your system. But you can do one more thing to enhance your solution. If you've found the file virtualenvwrapper.sh with the command which virtualenvwrapper.sh you know that it is inside of a folder of the PATH. So if you just write the filename, your file system will assume the file is inside of a PATH folder. So you you don't have to write out the full path. Just type:
+
+source "virtualenvwrapper.sh"
+Thats it. You are no longer frustrated. You have solved your problem. Hopefully.
+
