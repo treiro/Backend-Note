@@ -24,3 +24,7 @@ sudo service docker restart
 docker system prune --all --volumes
 #Access docker
 docker-compose exec postgres bash
+After using the below commands I was able to use docker-compose stop again.
+sudo apt-get purge --auto-remove apparmor
+sudo service docker restart
+docker system prune --all --volumes
