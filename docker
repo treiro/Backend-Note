@@ -28,3 +28,12 @@ After using the below commands I was able to use docker-compose stop again.
 sudo apt-get purge --auto-remove apparmor
 sudo service docker restart
 docker system prune --all --volumes
+
+###Mount volumn to host directory
+docker run --name=nginx -d -v ~/nginxlogs:/var/log/nginx -p 5000:80 nginx
+https://www.digitalocean.com/community/tutorials/how-to-share-data-between-the-docker-container-and-the-host
+    volumes:
+      - .:/usr/src/app/static
+      - /usr/www/flexi/static:/usr/app/static/project/static
+###Access container by bash
+sudo docker exec -i -t 109eefb8a960 /bin/bash
