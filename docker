@@ -37,3 +37,5 @@ https://www.digitalocean.com/community/tutorials/how-to-share-data-between-the-d
       - /usr/www/flexi/static:/usr/app/static/project/static
 ###Access container by bash
 sudo docker exec -i -t 109eefb8a960 /bin/bash
+###Uoload file from local to remote server
+ scp -P 2222 file.ext username@domain:~/ 
