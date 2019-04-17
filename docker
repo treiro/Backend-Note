@@ -39,3 +39,6 @@ https://www.digitalocean.com/community/tutorials/how-to-share-data-between-the-d
 sudo docker exec -i -t 109eefb8a960 /bin/bash
 ###Uoload file from local to remote server
  scp -P 2222 file.ext username@domain:~/ 
+#Change docker timezone
+ENV TZ=Asia/Ho_Chi_Minh
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
