@@ -42,3 +42,6 @@ sudo docker exec -i -t 109eefb8a960 /bin/bash
 #Change docker timezone
 ENV TZ=Asia/Ho_Chi_Minh
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+###Show docker log
+docker-compose logs -f -t
