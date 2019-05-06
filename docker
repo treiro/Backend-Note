@@ -47,3 +47,16 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 docker-compose logs -f -t
 ###Docker exec shell command
 docker-compose exec cms python3 manage.py migrate
+
+###Create an ENTRYPOINT script that cleans up any state data before running your CMD. E.g.
+https://stackoverflow.com/questions/28506722/restarting-a-docker-that-runs-supervisord-programs-keeps-pid-files-and-causes-er
+FROM someotherimage
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+And in entrypoint.sh:
+
+#!/bin/sh
+rm -f /tmp/*.pid
+exec "$@"
+The ENTRYPOINT script will run every time the container starts, and will ensure that any pid files in /tmp are cleared out before running the container command.
+
