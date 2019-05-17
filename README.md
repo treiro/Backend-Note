@@ -95,3 +95,15 @@ Congratulations. Virtualenvwrapper does now work on your system. But you can do 
 source "virtualenvwrapper.sh"
 Thats it. You are no longer frustrated. You have solved your problem. Hopefully.
 
+Change Postgres, Mongo config for all ip remote access
+sudo vim /etc/postgresql/10/main/postgresql.conf
+127.0.0.0 to 0.0.0.0
+sudo vim /etc/mongod.conf 
+127.0.0.0 to 0.0.0.0
+
+Check port open
+netstat -vatpn | grep 27017
+
+Restart Mongo service
+sudo systemctl restart mongod
+
