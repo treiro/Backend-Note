@@ -107,3 +107,5 @@ netstat -vatpn | grep 27017
 Restart Mongo service
 sudo systemctl restart mongod
 
+###Kill a proceess run on port
+sudo fuser -k 5001/tcp
