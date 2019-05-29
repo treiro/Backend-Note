@@ -109,3 +109,6 @@ sudo systemctl restart mongod
 
 ###Kill a proceess run on port
 sudo fuser -k 5001/tcp
+
+#DOcker remove all runnning container
+docker rm -f $(docker ps -a -q); docker rmi $(docker images -q)
