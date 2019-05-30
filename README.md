@@ -103,6 +103,8 @@ sudo vim /etc/mongod.conf
 
 Check port open
 netstat -vatpn | grep 27017
+total number connection
+netstat -ant | grep :5556 | awk '{print $6}' | sort | uniq -c | sort -n
 
 Restart Mongo service
 sudo systemctl restart mongod
