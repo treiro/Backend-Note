@@ -113,4 +113,6 @@ sudo systemctl restart mongod
 sudo fuser -k 5001/tcp
 
 #DOcker remove all runnning container
-docker rm -f $(docker ps -a -q); docker rmi $(docker images -q)
+docker rm -f $(docker ps -a -q); docker rmi $(docker images -q)  
+#Copy file to server (secure copy file)  
+ scp * sigma@192.168.1.200:/home/sigma/SSE/
