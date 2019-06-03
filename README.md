@@ -116,3 +116,5 @@ sudo fuser -k 5001/tcp
 docker rm -f $(docker ps -a -q); docker rmi $(docker images -q)    
 #Copy file to server (secure copy file)    
  scp * sigma@192.168.1.200:/home/sigma/SSE/  
+#SCP copy to vagrant host  
+scp -P 2222 -i /home/leo/Desktop/Demo/Vagrant/.vagrant/machines/default/virtualbox/private_key * vagrant@127.0.0.1:/home/vagrant/sse
