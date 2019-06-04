@@ -118,3 +118,6 @@ docker rm -f $(docker ps -a -q); docker rmi $(docker images -q)
  scp * sigma@192.168.1.200:/home/sigma/SSE/  
 #SCP copy to vagrant host  
 scp -P 2222 -i /home/leo/Desktop/Demo/Vagrant/.vagrant/machines/default/virtualbox/private_key * vagrant@127.0.0.1:/home/vagrant/sse
+
+#Đo số kết nối đến cổng tcp  
+netstat -ant | grep :9002 | awk '{print $6}' | sort | uniq -c | sort -n
