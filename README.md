@@ -120,4 +120,6 @@ docker rm -f $(docker ps -a -q); docker rmi $(docker images -q)
 scp -P 2222 -i /home/leo/Desktop/Demo/Vagrant/.vagrant/machines/default/virtualbox/private_key * vagrant@127.0.0.1:/home/vagrant/sse
 
 #Count total tcp connections  
-netstat -ant | grep :9002 | awk '{print $6}' | sort | uniq -c | sort -n
+netstat -ant | grep :9002 | awk '{print $6}' | sort | uniq -c | sort -n  
+#Docker remove all network
+docker network ls -q | xargs docker network rm
