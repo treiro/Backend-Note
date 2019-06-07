@@ -121,5 +121,5 @@ scp -P 2222 -i /home/leo/Desktop/Demo/Vagrant/.vagrant/machines/default/virtualb
 
 #Count total tcp connections  
 netstat -ant | grep :9002 | awk '{print $6}' | sort | uniq -c | sort -n  
-#Docker remove all network
+#Docker remove all network  
 docker network ls -q | xargs docker network rm
