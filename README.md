@@ -125,4 +125,7 @@ netstat -ant | grep :9002 | awk '{print $6}' | sort | uniq -c | sort -n
 docker network ls -q | xargs docker network rm  
 
 #Kill process by file name  
-ps aux | grep -i "node index.js" | awk {'print $2'} | xargs kill -9
+ps aux | grep -i "node index.js" | awk {'print $2'} | xargs kill -9  
+#Stop all service deploy by docker swarm  
+docker stack rm nats-swarming  
+
