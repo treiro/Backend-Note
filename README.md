@@ -128,4 +128,5 @@ docker network ls -q | xargs docker network rm
 ps aux | grep -i "node index.js" | awk {'print $2'} | xargs kill -9  
 #Stop all service deploy by docker swarm  
 docker stack rm nats-swarming  
-
+docker service ls   
+docker stack ps nats-swarming  
