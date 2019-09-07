@@ -11,3 +11,13 @@ i
 *dd
 #delete N lines, beginning with the current line; e.g., 5dd deletes 5 lines
 ndd or dnd
+
+
+#Ubuntu NTFS rad only
+https://linuxconfig.org/how-to-mount-partition-with-ntfs-file-system-and-read-write-access
+fdisk -l | grep NTFS 
+mkdir /mnt/ntfs 
+mount -t ntfs /dev/sdb1 /mnt/ntfs 
+
+https://askubuntu.com/questions/462381/cant-mount-ntfs-drive-the-disk-contains-an-unclean-file-system
+sudo ntfsfix /dev/sdb1
