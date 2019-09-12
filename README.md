@@ -134,6 +134,6 @@ docker stack rm stackdemo
 docker service ls   
 docker stack ps stackdemo  
 
-#Find all process listen on port
-sudo lsof -i :6379 | grep LISTEN
-sudo kill 953
+#Find all process listen on port  
+sudo lsof -i :6379 | grep LISTEN  
+sudo kill 953  
