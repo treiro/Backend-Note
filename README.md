@@ -69,7 +69,8 @@ If you are planning to use python 3 install the related python 3 versions
 
 sudo pip3 install virtualenv  
 sudo pip3 install virtualenvwrapper  
-You've successfully installed the packages for your python version and are all set, right? Well, try it. Type workon into your terminal. Your terminal will not be able to find the command (workon is a command of virtualenvwrapper). Of course it won't. Workon is an executable that will only be available to you once you load/source the file virtualenvwrapper.sh. But the official installation guide has you covered on this one, right?. Just open your .bash_profile and insert the following, it says in the documentation:  
+You've successfully installed the packages for your python version and are all set, right? Well, try it. Type workon into your terminal. Your terminal will not be able to find the command (workon is a command of virtualenvwrapper). Of course it won't. Workon is an executable that will only be available to you once you load/source the file virtualenvwrapper.sh. But the official installation guide has you covered on this one, right?. Just open your .bash_profile and insert the following, it says in the documentation:  sudo lsof -i :6379 | grep LISTEN
+
 
 export WORKON_HOME=$HOME/.virtualenvs  
 export PROJECT_HOME=$HOME/Devel  
@@ -88,6 +89,7 @@ Your result may look something like this: /Library/Frameworks/Python.framework/V
 
 source "/usr/local/bin/virtualenvwrapper.sh"  
 to:  
+sudo lsof -i :6379 | grep LISTEN
 
 "/Library/Frameworks/Python.framework/Versions/3.7/bin/virtualenvwrapper.sh"  
 Congratulations. Virtualenvwrapper does now work on your system. But you can do one more thing to enhance your solution. If you've found the file virtualenvwrapper.sh with the command which virtualenvwrapper.sh you know that it is inside of a folder of the PATH. So if you just write the filename, your file system will assume the file is inside of a PATH folder. So you you don't have to write out the full path. Just type:  
@@ -131,3 +133,7 @@ docker stack deploy --compose-file docker-compose.yml stackdemo
 docker stack rm stackdemo  
 docker service ls   
 docker stack ps stackdemo  
+
+#Find all process listen on port
+sudo lsof -i :6379 | grep LISTEN
+sudo kill 953
