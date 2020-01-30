@@ -137,3 +137,6 @@ docker stack ps stackdemo
 #Find all process listen on port  
 sudo lsof -i :6379 | grep LISTEN  
 sudo kill 953  
+
+#Stop all containers
+docker kill $(docker ps -q)
