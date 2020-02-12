@@ -140,3 +140,10 @@ sudo kill 953
 
 #Stop all containers  
 docker kill $(docker ps -q)  
+
+#Clear all table on postgres  
+DROP SCHEMA public CASCADE;  
+CREATE SCHEMA public;  
+GRANT ALL ON SCHEMA public TO postgres;  
+GRANT ALL ON SCHEMA public TO public;  
+COMMENT ON SCHEMA public IS 'standard public schema';  
