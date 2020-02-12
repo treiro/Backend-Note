@@ -142,6 +142,7 @@ sudo kill 953
 docker kill $(docker ps -q)  
 
 #Clear all table on postgres  
+psql -U postgres -W db  
 DROP SCHEMA public CASCADE;  
 CREATE SCHEMA public;  
 GRANT ALL ON SCHEMA public TO postgres;  
