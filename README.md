@@ -147,4 +147,7 @@ DROP SCHEMA public CASCADE;
 CREATE SCHEMA public;  
 GRANT ALL ON SCHEMA public TO postgres;  
 GRANT ALL ON SCHEMA public TO public;  
-COMMENT ON SCHEMA public IS 'standard public schema';  
+COMMENT ON SCHEMA public IS 'standard public schema'; 
+
+#Show docker log on swarm when container can not start  
+while true; do docker logs -f $(docker ps -q -f name=es_master1); sleep 1; done  
