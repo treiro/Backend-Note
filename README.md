@@ -151,5 +151,5 @@ COMMENT ON SCHEMA public IS 'standard public schema';
 
 #Show docker log on swarm when container can not start  
 while true; do docker logs -f $(docker ps -q -f name=es_master1); sleep 1; done  
-#Rebuild and restart container
+#Rebuild and restart container  
 docker-compose up -d --force-recreate --no-deps --build pub
