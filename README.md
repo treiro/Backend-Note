@@ -38,7 +38,10 @@ For MySQL 5.7.6 and newer
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password';  
 For MySQL 5.7.5 and older  
 
-SET PASSWORD FOR 'root'@'localhost' = PASSWORD('new_password');  
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('new_password');  curl -i -m 60 -X POST http://localhost:8001/certificates 
+-F "cert=$(cat cert.pem)" 
+-F "key=$(cat key.pem)" 
+-F "snis=domain.net"
 If the ALTER USER command doesn't work use:  
 
 UPDATE mysql.user SET authentication_string = PASSWORD('new_password')     WHERE User = 'root' AND Host = 'localhost';  
@@ -155,7 +158,7 @@ while true; do docker logs -f $(docker ps -q -f name=es_master1); sleep 1; done
 docker-compose up -d --force-recreate --no-deps --build pub  
 
 #Add ssl to KONG  
-`curl -i -m 60 -X POST http://localhost:8001/certificates   
+```curl -i -m 60 -X POST http://localhost:8001/certificates   
 -F "cert=$(cat cert.pem)"   
 -F "key=$(cat key.pem)"   
--F "snis=domain.net"`  
+-F "snis=domain.net"```  
