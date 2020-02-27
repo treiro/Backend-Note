@@ -155,7 +155,7 @@ while true; do docker logs -f $(docker ps -q -f name=es_master1); sleep 1; done
 docker-compose up -d --force-recreate --no-deps --build pub  
 
 #Add ssl to KONG  
-`curl -i -m 60 -X POST http://localhost:8001/certificates 
--F "cert=$(cat cert.pem)" 
--F "key=$(cat key.pem)" 
--F "snis=domain.net"`
+`curl -i -m 60 -X POST http://localhost:8001/certificates   
+-F "cert=$(cat cert.pem)"   
+-F "key=$(cat key.pem)"   
+-F "snis=domain.net"`  
