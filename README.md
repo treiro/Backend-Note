@@ -139,6 +139,8 @@ docker stack ps stackdemo
 
 #Leave node  
 docker swarm leave  
+#SHow swarm join token  
+docker swarm join-token worker  
 
 #Find all process listen on port  
 sudo lsof -i :6379 | grep LISTEN  
