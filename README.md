@@ -164,10 +164,7 @@ docker-compose up -d --force-recreate --no-deps --build pub
 
 #Add ssl to KONG  
 ```
-curl -i -m 60 -X POST http://localhost:8001/certificates   
--F "cert=$(cat cert.pem)"   
--F "key=$(cat key.pem)"   
--F "snis=domain.net"
+curl -i -m 60 -X POST http://localhost:8001/certificates -F "cert=$(cat cert.pem)" -F "key=$(cat privkey.pem)" -F "snis=kong.sigma-solutions.vn"
 ```  
 Deleting all the volumes (For DB)  
 
