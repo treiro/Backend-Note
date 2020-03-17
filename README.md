@@ -169,3 +169,9 @@ curl -i -m 60 -X POST http://localhost:8001/certificates
 -F "key=$(cat key.pem)"   
 -F "snis=domain.net"
 ```  
+Deleting all the volumes (For DB)  
+
+docker volume prune  
+
+docker volume ls  
+docker volume rm <name_of_volume>  
