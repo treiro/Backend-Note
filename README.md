@@ -172,3 +172,11 @@ docker volume prune
 
 docker volume ls  
 docker volume rm <name_of_volume>  
+
+#Show swarm node with label  
+docker node ls -q | xargs docker node inspect \   
+  -f '{{ .ID }} [{{ .Description.Hostname }}]: {{ .Spec.Labels }}'   
+  
+ #Set label for node  
+ docker node update --label-add node_name=kidssy_kong kidssy-kong  
+
