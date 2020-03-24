@@ -180,3 +180,7 @@ docker node ls -q | xargs docker node inspect \
  #Set label for node  
  docker node update --label-add node_name=kidssy_kong kidssy-kong  
 
+#Ubuntu Run script when start up   
+edit file /etc/rc.local  
+sudo ./startup.sh  
+
