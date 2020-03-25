@@ -186,8 +186,8 @@ edit file /etc/rc.local
 sudo ./startup.sh  
 
 sudo chmod +x /etc/rc.local  
-systemctl status rc-local
-sudo systemctl enable rc-local
-sudo systemctl start rc-local.service
+systemctl status rc-local  
+sudo systemctl enable rc-local  
+sudo systemctl start rc-local.service  
 
 sudo /etc/rc.local  
