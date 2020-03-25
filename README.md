@@ -185,3 +185,5 @@ edit file /etc/rc.local
 #!/bin/bash
 sudo ./startup.sh  
 
+sudo chmod +x /etc/rc.local  
+
