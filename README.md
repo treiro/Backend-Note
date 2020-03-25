@@ -195,3 +195,4 @@ sudo /etc/rc.local
 #Change hostname  
 sudo hostnamectl set-hostname --static abc.com  
 sudo hostname abc.com  
+sudo docker node update --label-add db=true 8zcy7zl4zb2hveghwoy10o4we  
