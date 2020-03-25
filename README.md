@@ -192,6 +192,6 @@ sudo systemctl start rc-local.service
 
 sudo /etc/rc.local  
 
-#Change hostname
+#Change hostname  
 sudo hostnamectl set-hostname --static abc.com  
 sudo hostname abc.com  
