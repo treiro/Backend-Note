@@ -182,5 +182,6 @@ docker node ls -q | xargs docker node inspect \
 
 #Ubuntu Run script when start up   
 edit file /etc/rc.local  
+#!/bin/bash
 sudo ./startup.sh  
 
