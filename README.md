@@ -196,3 +196,6 @@ sudo /etc/rc.local
 sudo hostnamectl set-hostname --static abc.com  
 sudo hostname abc.com  
 sudo docker node update --label-add db=true 8zcy7zl4zb2hveghwoy10o4we  
+
+#POSTGRES truncate all data in table  
+TRUNCATE TABLE "user" CASCADE;  
