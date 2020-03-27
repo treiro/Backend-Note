@@ -202,3 +202,5 @@ TRUNCATE TABLE "user" CASCADE;
 
 #Update service in swarm global mode  
 docker service update --force sched_busybox-global  
+#List all nodes  
+sudo docker node ls | grep Ready  
