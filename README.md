@@ -199,3 +199,6 @@ sudo docker node update --label-add db=true 8zcy7zl4zb2hveghwoy10o4we
 
 #POSTGRES truncate all data in table  
 TRUNCATE TABLE "user" CASCADE;  
+
+#Update service in swarm global mode  
+docker service update --force sched_busybox-global  
