@@ -204,3 +204,10 @@ TRUNCATE TABLE "user" CASCADE;
 docker service update --force sched_busybox-global  
 #List all nodes  
 sudo docker node ls | grep Ready  
+#Tunning mysql  
+mysql –u root –p  
+SET GLOBAL max_connections = 512;  
+# vi /etc/my.cnf  /usr/share/mysql/my-default.cnf;   
+max_connections = 512  
+
+
