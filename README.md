@@ -210,4 +210,6 @@ SET GLOBAL max_connections = 512;
 # vi /etc/my.cnf  /usr/share/mysql/my-default.cnf;   
 max_connections = 512  
 
-
+#Docker stop all containers  
+docker stop $(docker ps -a -q)  
+docker rm $(docker ps -a -q)  
