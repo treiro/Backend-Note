@@ -156,6 +156,8 @@ CREATE SCHEMA public;
 GRANT ALL ON SCHEMA public TO postgres;  
 GRANT ALL ON SCHEMA public TO public;  
 COMMENT ON SCHEMA public IS 'standard public schema'; 
+#View all table on db  
+SELECT * FROM pg_catalog.pg_tables WHERE schemaname != 'pg_catalog' AND schemaname != 'information_schema';  
 
 #Show docker log on swarm when container can not start  
 while true; do docker logs -f $(docker ps -q -f name=es_master1); sleep 1; done  
