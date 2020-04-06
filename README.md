@@ -216,3 +216,6 @@ max_connections = 512
 #Docker stop all containers  
 docker stop $(docker ps -a -q)  
 docker rm $(docker ps -a -q)  
+
+#List all pip package install on docker  
+apt list --installed | grep python3-pip  
