@@ -132,6 +132,7 @@ docker network ls -q | xargs docker network rm
 #Kill process by file name  
 ps aux | grep -i "node index.js" | awk {'print $2'} | xargs kill -9  
 #Stop all service deploy by docker swarm  
+docker swarm init --advertise-addr 192.168.99.121  
 docker stack deploy --compose-file docker-compose.yml stackdemo  
 docker stack rm stackdemo  
 docker service ls   
