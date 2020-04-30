@@ -220,3 +220,13 @@ docker rm $(docker ps -a -q)
 
 #List all pip package install on docker  
 apt list --installed | grep python3-pip  
+
+#Sqlchema select in 
+`from sqlalchemy.sql.expression import case
+
+ordering = case(
+    {id: index for index, id in enumerate(my_list_of_ids)},
+    value=Shoe.id
+ )
+Shoe.query.filter(Shoe.id.in_(my_list_of_ids)).order_by(ordering).all()
+`  
