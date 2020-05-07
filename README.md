@@ -168,6 +168,7 @@ docker-compose up -d --force-recreate --no-deps --build pub
 
 #Add ssl to KONG  
 ```
+https://collectiveidea.com/blog/archives/2016/01/12/lets-encrypt-with-a-rails-app-on-heroku  
 curl -i -m 60 -X POST http://localhost:8001/certificates -F "cert=$(cat cert.pem)" -F "key=$(cat privkey.pem)" -F "snis=kong.sigma-solutions.vn"
 ```  
 Deleting all the volumes (For DB)  
