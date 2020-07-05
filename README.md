@@ -236,4 +236,7 @@ Postgres Backup
 `docker exec -i pg_container_name pg_dump --username pg_username [--password pg_password] database_name > /desired/path/on/your/machine/dump.sql`
 
 Restore  
-`docker exec -i pg_container_name psql --username pg_username [--password pg_password] database_name < /path/on/your/machine/dump.sql`
+`docker exec -i pg_container_name psql --username pg_username [--password pg_password] database_name < /path/on/your/machine/dump.sql`  
+
+#Hash key for facebook login from SHA1  
+echo SHA1_here | xxd -r -p | openssl base64  
