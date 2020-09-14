@@ -243,11 +243,9 @@ echo SHA1_here | xxd -r -p | openssl base64
 
 #Show all node with label  
 
-`docker node ls -q | xargs docker node inspect \
-  -f '{{ .ID }} [{{ .Description.Hostname }}]: {{ .Spec.Labels }}'`  
+`docker node ls -q | xargs docker node inspect -f '{{ .ID }} [{{ .Description.Hostname }}]: {{ .Spec.Labels }}'`  
 #You can adjust that to use a range for prettier formatting instead of printing the default map:  
 
-`docker node ls -q | xargs docker node inspect \
-  -f '{{ .ID }} [{{ .Description.Hostname }}]: {{ range $k, $v := .Spec.Labels }}{{ $k }}={{ $v }} {{end}}'`  
+`docker node ls -q | xargs docker node inspect -f '{{ .ID }} [{{ .Description.Hostname }}]: {{ range $k, $v := .Spec.Labels }}{{ $k }}={{ $v }} {{end}}'`  
 
 
