@@ -248,4 +248,5 @@ echo SHA1_here | xxd -r -p | openssl base64
 
 `docker node ls -q | xargs docker node inspect -f '{{ .ID }} [{{ .Description.Hostname }}]: {{ range $k, $v := .Spec.Labels }}{{ $k }}={{ $v }} {{end}}'`  
 
-
+#Docker deamon logs  
+journalctl -u docker.service  
