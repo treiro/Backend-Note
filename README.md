@@ -250,3 +250,6 @@ echo SHA1_here | xxd -r -p | openssl base64
 
 #Docker deamon logs  
 journalctl -u docker.service  
+
+#Grant sudo for docker  
+sudo usermod -aG docker ubuntu  
