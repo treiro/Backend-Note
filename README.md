@@ -256,4 +256,4 @@ sudo usermod -aG docker ubuntu
 
 
 # SHow full log for docker stack  
-docker stack ps --no-trunc kidssy | grep 'container failed:'  
+docker stack ps --no-trunc test | grep 'container failed:'  
