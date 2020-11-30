@@ -253,3 +253,7 @@ journalctl -u docker.service
 
 #Grant sudo for docker  
 sudo usermod -aG docker ubuntu  
+
+
+# SHow full log for docker stack  
+docker stack ps --no-trunc kidssy | grep 'container failed:'  
