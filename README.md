@@ -255,5 +255,5 @@ journalctl -u docker.service
 sudo usermod -aG docker ubuntu  
 
 
-# SHow full log for docker stack  
+#SHow full log for docker stack  
 docker stack ps --no-trunc test | grep 'container failed:'  
