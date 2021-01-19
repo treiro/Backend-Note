@@ -260,3 +260,7 @@ docker stack ps --no-trunc test | grep 'container failed:'
 #backup and restore postgresdb from docker  
 sudo docker exec -i 2f1765f27bba pg_dump -s --username postgres  user > user_dump_s.sql  
 sudo docker exec -i 0d7997de4376 psql --username postgres  user < user_dump_s.sql  
+
+find and update JAVA_HOME  
+`export JAVA_HOME=$(readlink -ze /usr/bin/javac | xargs -0 dirname -z | xargs -0 dirname)
+`  
