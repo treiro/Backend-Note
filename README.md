@@ -264,3 +264,5 @@ sudo docker exec -i 0d7997de4376 psql --username postgres  user < user_dump_s.sq
 find and update JAVA_HOME  
 `export JAVA_HOME=$(readlink -ze /usr/bin/javac | xargs -0 dirname -z | xargs -0 dirname)
 `  
+//Find largest folder size in ubuntu  
+$sudo du -a /deploy | sort -n -r | head -n 20  
