@@ -266,3 +266,7 @@ find and update JAVA_HOME
 `  
 //Find largest folder size in ubuntu  
 $sudo du -a /deploy | sort -n -r | head -n 20  
+//Start psql
+psql DBNAME USERNAME  
+OR  
+sudo -u postgres psql  
