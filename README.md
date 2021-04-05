@@ -270,3 +270,6 @@ $sudo du -a /deploy | sort -n -r | head -n 20
 psql DBNAME USERNAME  
 OR  
 sudo -u postgres psql  
+
+#Docker swarm remove labels node  
+docker node update --label-rm host q2pzbwgojx5v9ynxpg1cre4m1  
