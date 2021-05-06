@@ -299,3 +299,6 @@ Set Password on User
 If you want to be able to log in as the user without an SSH key, setting a password will allow that, as long as PasswordAuthentication is enabled in /etc/ssh/sshd_config.  
 
 passwd mynewuser  
+
+#Run docker without sudo  
+` sudo gpasswd -a $USER docker`  
