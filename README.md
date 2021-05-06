@@ -302,3 +302,8 @@ passwd mynewuser
 
 #Run docker without sudo  
 ` sudo gpasswd -a $USER docker`  
+
+#Enable Tab-autocomplete in ubuntu  
+`sudo apt install bash-completion`  
+`sudo apt install --reinstall bash-completion` 
+`chsh -s /bin/bash`  
