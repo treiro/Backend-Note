@@ -305,5 +305,5 @@ passwd mynewuser
 
 #Enable Tab-autocomplete in ubuntu  
 `sudo apt install bash-completion`  
-`sudo apt install --reinstall bash-completion` 
+`sudo apt install --reinstall bash-completion`  
 `chsh -s /bin/bash`  
