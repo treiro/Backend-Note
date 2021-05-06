@@ -290,10 +290,10 @@ Add User to sudo Group
 `usermod -aG sudo mynewuser`  
 Set Permissions  
 
-`chown -R mynewuser:mynewuser /home/mynewuser/  
-chown root:root /home/mynewuser  
-chmod 700 /home/mynewuser/.ssh  
-chmod 644 /home/mynewuser/.ssh/authorized_keys`  
+`chown -R mynewuser:mynewuser /home/mynewuser/`  
+`chown root:root /home/mynewuser`  
+`chmod 700 /home/mynewuser/.ssh`  
+`chmod 644 /home/mynewuser/.ssh/authorized_keys`  
 Set Password on User  
 
 If you want to be able to log in as the user without an SSH key, setting a password will allow that, as long as PasswordAuthentication is enabled in /etc/ssh/sshd_config.  
