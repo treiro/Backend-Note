@@ -313,3 +313,9 @@ passwd mynewuser
 `sudo apt install bash-completion`  
 `sudo apt install --reinstall bash-completion`  
 `chsh -s /bin/bash`  
+
+#Kong logs  
+/usr/local/kong/logsFilename(s):  
+error.log  
+access.log  
+admin_access.log  
