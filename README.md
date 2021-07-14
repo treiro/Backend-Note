@@ -315,7 +315,8 @@ passwd mynewuser
 `chsh -s /bin/bash`  
 
 #Kong logs  
-/usr/local/kong/logsFilename(s):  
+/usr/local/kong/logs  
+Filename(s):  
 error.log  
 access.log  
 admin_access.log  
