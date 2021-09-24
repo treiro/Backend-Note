@@ -320,3 +320,6 @@ Filename(s):
 error.log  
 access.log  
 admin_access.log  
+# Git save credential  
+git config --global credential.helper store  
+
